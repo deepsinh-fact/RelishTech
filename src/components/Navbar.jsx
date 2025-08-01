@@ -33,19 +33,20 @@ function Navbar() {
   const navLinks = [
     { label: "Home", path: "/home" },
     { label: "About", path: "/about" },
+    { label: "Why Us", path: "/why-us"},
     { label: "Services", path: "/services" },
     { label: "Contact", path: "/contact" }
   ];
 
   return (
-    <nav className="bg-gray-950 bg-opacity-80 shadow-md px-4 sm:px-8 py-4 relative z-20">
+    <nav className="bg-white shadow-md px-4 sm:px-8 py-4 relative z-20 border-b border-gray-200">
       <div className="flex items-center justify-between">
         {/* Logo */}
-        <div className="text-xl sm:text-2xl font-bold text-blue-400">RELISH</div>
+        <div className="text-xl sm:text-2xl font-bold text-blue-600">RELISH</div>
 
         {/* Hamburger for mobile */}
         <button
-          className="sm:hidden flex items-center justify-center text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50 rounded-md p-2 transition-all duration-200"
+          className="sm:hidden flex items-center justify-center text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 rounded-md p-2 transition-all duration-200"
           onClick={() => setIsOpen((prev) => !prev)}
           aria-label="Toggle menu"
           aria-expanded={isOpen}
@@ -82,8 +83,8 @@ function Navbar() {
                   className={`
                     transition-colors duration-200 py-2
                     ${location.pathname === link.path
-                      ? "text-blue-400 font-semibold"
-                      : "hover:text-blue-400 text-white"
+                      ? "text-blue-600 font-semibold"
+                      : "hover:text-blue-600 text-gray-700"
                     }
                   `}
                 >
@@ -93,7 +94,7 @@ function Navbar() {
             ))}
           </ul>
           <button
-            className="bg-blue-500 hover:bg-blue-600 transition-colors duration-200 px-6 py-2 rounded text-white font-semibold ml-4 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50"
+            className="bg-blue-600 hover:bg-blue-700 transition-colors duration-200 px-6 py-2 rounded text-white font-semibold ml-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
             onClick={handleLinkClick}
           >
             Get Started
@@ -106,7 +107,7 @@ function Navbar() {
         isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
       }`}>
         <div className="mt-4 animate-fadeIn">
-          <ul className="flex flex-col gap-1 text-base bg-gray-950 bg-opacity-95 rounded-lg shadow-lg py-4 px-4 border border-gray-800">
+          <ul className="flex flex-col gap-1 text-base bg-white rounded-lg shadow-lg py-4 px-4 border border-gray-200">
             {navLinks.map(link => (
               <li key={link.path}>
                 <Link
@@ -115,8 +116,8 @@ function Navbar() {
                   className={`
                     block py-3 px-3 rounded-md transition-colors duration-200 focus:outline-none
                     ${location.pathname === link.path
-                      ? "bg-blue-500 text-white font-semibold"
-                      : "hover:bg-blue-500 hover:text-white text-white"
+                      ? "bg-blue-600 text-white font-semibold"
+                      : "hover:bg-blue-100 hover:text-blue-700 text-gray-700"
                     }
                   `}
                 >
@@ -124,9 +125,9 @@ function Navbar() {
                 </Link>
               </li>
             ))}
-            <li className="pt-2 border-t border-gray-700 mt-2">
+            <li className="pt-2 border-t border-gray-200 mt-2">
               <button
-                className="w-full bg-blue-500 hover:bg-blue-600 transition-colors duration-200 px-4 py-3 rounded-md text-white font-semibold focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50"
+                className="w-full bg-blue-600 hover:bg-blue-700 transition-colors duration-200 px-4 py-3 rounded-md text-white font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
                 onClick={handleLinkClick}
               >
                 Get Started

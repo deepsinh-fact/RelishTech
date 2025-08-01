@@ -1,79 +1,121 @@
-import React from "react";
-import HeroImg from '../assets/HeroImg.jpg';
+import React from 'react';
+import Hero from '../components/Hero';
 
-function Home() {
+// Star icon component
+function Star({ fill, ...props }) {
   return (
-    <div className="relative font-sans min-h-screen text-white bg-gray-900">
-      {/* Background Image  */}
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-60"
-        style={{
-          backgroundImage: `url(${HeroImg})`,
-        }}
-      ></div>
+    <svg className="w-5 h-5" fill={fill} viewBox="0 0 20 20" {...props}>
+      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+    </svg>
+  );
+}
 
-      {/* Content Wrapper */}
-      <div className="relative z-10 flex flex-col min-h-screen">
+// Sample services data
+const servicesData = [
+  {
+    title: "Threat Assessment",
+    description: "Comprehensive analysis of your security vulnerabilities and potential threats.",
+    icon: <div className="w-8 h-8 bg-blue-500 rounded"></div>
+  },
+  {
+    title: "Security Monitoring",
+    description: "24/7 monitoring and real-time threat detection for your systems.",
+    icon: <div className="w-8 h-8 bg-green-500 rounded"></div>
+  },
+  {
+    title: "Incident Response",
+    description: "Rapid response and recovery services for security incidents.",
+    icon: <div className="w-8 h-8 bg-red-500 rounded"></div>
+  },
+  {
+    title: "Compliance Audit",
+    description: "Ensure your business meets industry security standards and regulations.",
+    icon: <div className="w-8 h-8 bg-purple-500 rounded"></div>
+  }
+];
 
-        {/* Hero Section */}
-        <header className="flex flex-col md:flex-row items-center justify-between gap-8 px-4 py-12 sm:px-8 sm:py-24 flex-grow">
-          <div className="max-w-xl w-full text-center md:text-left">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 sm:mb-6 leading-tight">
-              Protect Your Business with{" "}
-              <span className="text-blue-400">Top Security</span> Solutions
-            </h1>
-            <p className="text-gray-300 mb-6 sm:mb-8 text-base sm:text-lg">
-              Advanced cyber security services and solutions to keep your data and infrastructure safe.
+
+const testimonialsData = [
+  {
+    quote: "Trustevo helped us identify and fix critical vulnerabilities before they became problems.",
+    name: "John Smith",
+    company: "Tech Corp"
+  },
+  {
+    quote: "Their 24/7 monitoring service gives us peace of mind knowing our systems are protected.",
+    name: "Sarah Johnson",
+    company: "Digital Solutions"
+  },
+  {
+    quote: "Professional, reliable, and incredibly knowledgeable. Highly recommended!",
+    name: "Mike Davis",
+    company: "StartupXYZ"
+  }
+
+];
+
+function Home({ onNavigate }) {
+  return (
+    <div>
+      <Hero title="Your Shield in the Digital World">
+        <p>We provide cutting-edge cybersecurity solutions to protect your business from evolving threats. Secure your future with us.</p>
+        <button onClick={() => onNavigate('services')} className="mt-8 inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-transform duration-300 hover:scale-105">
+          Explore Our Services
+        </button>
+      </Hero>
+
+      {/* Services Section */}
+      <section className="py-16 sm:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-base font-semibold text-blue-600 tracking-wide uppercase">Our Services</h2>
+            <p className="mt-2 text-3xl font-extrabold text-gray-800 sm:text-4xl">
+              What We Offer
             </p>
-            <button className="bg-blue-500 hover:bg-blue-600 transition px-6 py-3 rounded text-white font-semibold text-base sm:text-lg w-full sm:w-auto">
-              Get Free Quote
-            </button>
-          </div>
-          <div className="flex justify-center md:block w-full md:w-auto">
-            {/* <img
-              className="w-64 sm:w-80 md:w-96 max-w-full rounded-lg shadow-lg object-cover"
-              src={HeroImg}
-              alt="Cyber Security"
-              loading="lazy"
-            /> */}
-          </div>
-        </header>
-
-        {/* Services Section */}
-        <section className="bg-gray-800 bg-opacity-90 py-10 px-4 sm:py-16 sm:px-8 rounded-t-lg shadow-inner mx-4 sm:mx-8 mb-10">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white">Our Services</h2>
-            <p className="text-gray-300 mt-2 sm:mt-3">
-              Dummy services description goes here.
+            <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-600">
+              A comprehensive suite of services to cover all your security needs.
             </p>
           </div>
-          <div className="grid gap-6 sm:gap-8 md:grid-cols-3">
-            <div className="bg-gray-900 bg-opacity-90 p-6 rounded-lg shadow hover:shadow-xl transition">
-              <h3 className="text-lg sm:text-xl font-bold text-blue-400 mb-2">Threat Analysis</h3>
-              <p className="text-gray-300 text-sm sm:text-base">
-                Identify potential threats and stay protected.
-              </p>
-            </div>
-            <div className="bg-gray-900 bg-opacity-90 p-6 rounded-lg shadow hover:shadow-xl transition">
-              <h3 className="text-lg sm:text-xl font-bold text-blue-400 mb-2">Network Defence</h3>
-              <p className="text-gray-300 text-sm sm:text-base">
-                Secure your network from unwanted access.
-              </p>
-            </div>
-            <div className="bg-gray-900 bg-opacity-90 p-6 rounded-lg shadow hover:shadow-xl transition">
-              <h3 className="text-lg sm:text-xl font-bold text-blue-400 mb-2">Incident Response</h3>
-              <p className="text-gray-300 text-sm sm:text-base">
-                Quick and effective solutions to cyber incidents.
-              </p>
-            </div>
+          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {servicesData.map((service) => (
+              <div key={service.title} className="bg-gray-50 p-8 rounded-2xl shadow-lg border border-gray-200 transform hover:-translate-y-2 transition-transform duration-300">
+                <div className="flex items-center justify-center h-16 w-16 rounded-full bg-white mb-6 shadow-md">
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">{service.title}</h3>
+                <p className="text-gray-600">{service.description}</p>
+              </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Footer */}
-        <footer className="bg-gray-950 bg-opacity-90 py-6 sm:py-8 mt-auto text-center text-gray-400 text-sm sm:text-base rounded-t-lg shadow-inner mx-4 sm:mx-8">
-          &copy; {new Date().getFullYear()} Trustevo. All rights reserved.
-        </footer>
-      </div>
+      {/* Testimonials Section */}
+      <section className="py-16 sm:py-24 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl font-extrabold text-gray-800 sm:text-4xl">What Our Clients Say</h2>
+            <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-600">
+              Real stories from businesses we've helped secure.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-8 md:grid-cols-1 lg:grid-cols-3">
+            {testimonialsData.map((testimonial, index) => (
+              <div key={index} className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+                <div className="flex text-yellow-500 mb-4">
+                  {[...Array(5)].map((_, i) => <Star key={i} fill="currentColor" />)}
+                </div>
+                <p className="text-gray-700 italic">"{testimonial.quote}"</p>
+                <div className="mt-6">
+                  <p className="font-bold text-gray-800">{testimonial.name}</p>
+                  <p className="text-sm text-blue-600">{testimonial.company}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }
