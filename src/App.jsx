@@ -2,11 +2,13 @@ import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer"; 
-import Home from "./pages/Home";
+// import Footer from "./components/Footer"; 
+import Home from "./pages/Home.jsx";
 import About from "./pages/About";
-import WhyUs from "./pages/WhyUs";
-import Service from "./pages/Service";
+import WhyChooseUs from "./pages/WhyChooseUs";
+import OurWork from "./pages/OurWork";
+import Contact from "./pages/Contact";
+// import Service from "./pages/Service";
 
 function App() {
   return (
@@ -18,14 +20,16 @@ function App() {
           <Route path="/" element={<Navigate to="/home" replace />} />
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/why-us" element={<WhyUs />} />
-          <Route path="/services" element={<Service />} />
+          <Route path="/why-choose-us" element={<WhyChooseUs />} />
+          <Route path="/our-work" element={<OurWork />} />
+          <Route path="/contact" element={<Contact />} />
+          {/* <Route path="/services" element={<Service />} /> */}
        
           <Route path="*" element={<div className="p-8 text-center">Page Not Found</div>} />
         </Routes>
       </main>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

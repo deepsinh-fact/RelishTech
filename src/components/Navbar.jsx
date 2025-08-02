@@ -1,143 +1,120 @@
-import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
-function Navbar() {
+
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation(); // Use React Router to get current route
 
-  // Close mobile menu when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (isOpen && !event.target.closest('nav')) {
-        setIsOpen(false);
-      }
-    };
-    document.addEventListener('click', handleClickOutside);
-    return () => document.removeEventListener('click', handleClickOutside);
-  }, [isOpen]);
-
-  // Close mobile menu on window resize
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 640) {
-        setIsOpen(false);
-      }
-    };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  const handleLinkClick = () => setIsOpen(false);
-
-  // Define your nav links and paths in one location for DRY code
   const navLinks = [
-    { label: "Home", path: "/home" },
-    { label: "About", path: "/about" },
-    { label: "Why Us", path: "/why-us"},
-    { label: "Services", path: "/services" },
-    { label: "Contact", path: "/contact" }
+    { name: 'Home', href: '/home' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Services', href: '/services' },
+    { name: 'Why Choose Us', href: '/why-choose-us' },
+    { name: 'Our Work', href: '/our-work' },
+    { name: 'Contact', href: '/contact' },
   ];
 
+  const handleNavClick = () => {
+    setIsOpen(false);
+  };
+
   return (
-    <nav className="bg-white shadow-md px-4 sm:px-8 py-4 relative z-20 border-b border-gray-200">
-      <div className="flex items-center justify-between">
-        {/* Logo */}
-        <div className="text-xl sm:text-2xl font-bold text-blue-600">RELISH</div>
+    <nav className="bg-[#0A1F44] sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <NavLink to="/home" className="text-2xl font-bold text-white">
+              Relish
+            </NavLink>
+          </div>
 
-        {/* Hamburger for mobile */}
-        <button
-          className="sm:hidden flex items-center justify-center text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 rounded-md p-2 transition-all duration-200"
-          onClick={() => setIsOpen((prev) => !prev)}
-          aria-label="Toggle menu"
-          aria-expanded={isOpen}
-        >
-          <svg
-            className={`w-6 h-6 transition-transform duration-200 ${isOpen ? 'rotate-90' : ''}`}
-            fill="none"
-            stroke="currentColor"
-            strokeWidth={2}
-            viewBox="0 0 24 24"
-          >
-            {isOpen ? (
-              // X icon
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              // Hamburger icon
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            )}
-          </svg>
-        </button>
-
-        {/* Desktop Nav */}
-        <div className="hidden sm:flex items-center gap-6">
-          <ul className="flex items-center gap-6 text-base lg:text-lg">
-            {navLinks.map(link => (
-              <li key={link.path}>
-                <Link
-                  to={link.path}
-                  onClick={handleLinkClick}
-                  className={`
-                    transition-colors duration-200 py-2
-                    ${location.pathname === link.path
-                      ? "text-blue-600 font-semibold"
-                      : "hover:text-blue-600 text-gray-700"
-                    }
-                  `}
-                >
-                  {link.label}
-                </Link>
-              </li>
+          {/* Desktop Navigation Links */}
+          <div className="hidden lg:flex lg:items-center lg:space-x-2">
+            {navLinks.map((link) => (
+              <NavLink
+                key={link.name}
+                to={link.href}
+                className={({ isActive }) =>
+                  `px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${isActive
+                    ? 'text-white bg-white/10'
+                    : 'text-white hover:bg-white hover:text-[#005A9C] hover:shadow-lg transform hover:scale-105'
+                  }`
+                }
+              >
+                {link.name}
+              </NavLink>
             ))}
-          </ul>
-          <button
-            className="bg-blue-600 hover:bg-blue-700 transition-colors duration-200 px-6 py-2 rounded text-white font-semibold ml-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
-            onClick={handleLinkClick}
-          >
-            Get Started
-          </button>
+          </div>
+
+          {/* Desktop Get a Quote Button */}
+          <div className="hidden lg:block">
+            <a
+              href="#"
+              className="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition-all duration-300"
+            >
+              Sign In
+            </a>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className="lg:hidden flex items-center">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              aria-expanded="false"
+            >
+              <span className="sr-only">Open main menu</span>
+              {isOpen ? (
+                <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
+          </div>
         </div>
       </div>
 
       {/* Mobile Menu */}
-      <div className={`sm:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-        isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-      }`}>
-        <div className="mt-4 animate-fadeIn">
-          <ul className="flex flex-col gap-1 text-base bg-white rounded-lg shadow-lg py-4 px-4 border border-gray-200">
-            {navLinks.map(link => (
-              <li key={link.path}>
-                <Link
-                  to={link.path}
-                  onClick={handleLinkClick}
-                  className={`
-                    block py-3 px-3 rounded-md transition-colors duration-200 focus:outline-none
-                    ${location.pathname === link.path
-                      ? "bg-blue-600 text-white font-semibold"
-                      : "hover:bg-blue-100 hover:text-blue-700 text-gray-700"
-                    }
-                  `}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-            <li className="pt-2 border-t border-gray-200 mt-2">
-              <button
-                className="w-full bg-blue-600 hover:bg-blue-700 transition-colors duration-200 px-4 py-3 rounded-md text-white font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
-                onClick={handleLinkClick}
+      {isOpen && (
+        <div className="lg:hidden bg-[#0E3386]" id="mobile-menu">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            {navLinks.map((link) => (
+              <NavLink
+                key={link.name}
+                to={link.href}
+                onClick={handleNavClick}
+                className={({ isActive }) =>
+                  `block px-4 py-3 mx-2 rounded-full text-base font-medium transition-all duration-300 ${isActive
+                    ? 'text-white bg-white/10'
+                    : 'text-white hover:bg-white hover:text-[#005A9C] hover:shadow-lg'
+                  }`
+                }
               >
-                Get Started
-              </button>
-            </li>
-          </ul>
+                {link.name}
+              </NavLink>
+            ))}
+          </div>
+          <div className="pt-4 pb-3 border-t border-gray-700">
+            <div className="px-5">
+              <a
+                href="#"
+                className="block w-full text-center bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition-all duration-300"
+              >
+                Sign In
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
+      )}
     </nav>
   );
-}
+};
+
 
 export default Navbar;
+
