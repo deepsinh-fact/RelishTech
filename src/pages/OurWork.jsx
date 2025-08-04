@@ -12,7 +12,7 @@ const OurWork = () => {
             <Hero data={heroData.ourWork} />
 
             {/* Stats Section */}
-            <section className="py-16 bg-[#0A1F44]">
+            <section className="py-8 bg-[#0A1F44]">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                         <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10">
@@ -36,8 +36,7 @@ const OurWork = () => {
 
                 <IndustriesWeServe />
                 <WhatWeDo />
-           
-
+        
             </section>
             <Footer />
         </div>

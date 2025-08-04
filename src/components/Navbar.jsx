@@ -11,6 +11,7 @@ const Navbar = () => {
     { name: 'Services', href: '/services' },
     { name: 'Why Choose Us', href: '/why-choose-us' },
     { name: 'Our Work', href: '/our-work' },
+    {name: 'Our Team' , href: '/our-team'},
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -48,14 +49,14 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Get a Quote Button */}
-          <div className="hidden lg:block">
+          {/* <div className="hidden lg:block">
             <a
               href="#"
               className="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition-all duration-300"
             >
               Sign In
             </a>
-          </div>
+          </div> */}
 
           {/* Mobile Menu Button */}
           <div className="lg:hidden flex items-center">

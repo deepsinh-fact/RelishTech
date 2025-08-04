@@ -8,7 +8,8 @@ import About from "./pages/About";
 import WhyChooseUs from "./pages/WhyChooseUs";
 import OurWork from "./pages/OurWork";
 import Contact from "./pages/Contact";
-// import Service from "./pages/Service";
+import Services from "./pages/Services";
+import OurTeam from "./pages/OurTeam";
 
 function App() {
   return (
@@ -20,11 +21,13 @@ function App() {
           <Route path="/" element={<Navigate to="/home" replace />} />
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/why-choose-us" element={<WhyChooseUs />} />
           <Route path="/our-work" element={<OurWork />} />
+          <Route path="/our-team" element={<OurTeam />} />
           <Route path="/contact" element={<Contact />} />
-          {/* <Route path="/services" element={<Service />} /> */}
-       
+        
+
           <Route path="*" element={<div className="p-8 text-center">Page Not Found</div>} />
         </Routes>
       </main>

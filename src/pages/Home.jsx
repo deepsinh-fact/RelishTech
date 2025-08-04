@@ -10,7 +10,7 @@ const Home = () => {
     return (
         // <main className="bg-[#0E3386]">
         <main className="bg-[#0A1F44]">
-            <div className="max-w-7xl mx-auto py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto py-6 sm:py-12 px-4 sm:px-6 lg:px-8">
                 <div className="text-center">
                     <h1 className="text-4xl font-bold text-white sm:text-5xl md:text-6xl">
                         <span className="block">Consult. Protect. Succeed.

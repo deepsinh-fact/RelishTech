@@ -4,15 +4,7 @@ import healthcareImg from "./assets/Service/healthcare.jpg";
 import automobileImg from "./assets/Service/automobile.jpg";
 import itServiceImg from "./assets/Service/IT service.jpg";
 import startupImg from "./assets/Service/startup.jpg";
-import img2 from "./assets/serviceDelivered/img2.jpg";
-import img3 from "./assets/serviceDelivered/img3.jpg";
-import img4 from "./assets/serviceDelivered/img4.jpg";
-import img5 from "./assets/serviceDelivered/img5.jpg";
-import img6 from "./assets/serviceDelivered/img6.jpg";
-import img7 from "./assets/serviceDelivered/img7.jpg";
-import img8 from "./assets/serviceDelivered/img8.jpg";
-import img9 from "./assets/serviceDelivered/img9.jpg";
-import img10 from "./assets/serviceDelivered/img10.jpg";
+
 
 export const heroData = {
   home: {
@@ -93,7 +85,7 @@ export const aboutData = {
     }
   ],
   image: '/src/assets/protect.jpg'
-
+  
 };
 
 export const statsData = [
@@ -228,163 +220,163 @@ export const whyChooseUsData = {
 
 export const industries = [
   {
-    title: "Banking, NBFCs & Financial Institutions",
-    description: "Specialized solutions for the highly regulated financial sector",
-    image: bankingImg,
-    gradient: "from-blue-500 to-blue-700",
-    borderColor: "border-blue-200"
+      title: "Banking, NBFCs & Financial Institutions",
+      description: "Specialized solutions for the highly regulated financial sector",
+      image: bankingImg,
+      gradient: "from-blue-500 to-blue-700",
+      borderColor: "border-blue-200"
   },
   {
-    title: "FinTech & Stock Broking",
-    description: "Security for innovative financial technology companies",
-    image: fintechImg,
-    gradient: "from-green-500 to-green-700",
-    borderColor: "border-green-200"
+      title: "FinTech & Stock Broking",
+      description: "Security for innovative financial technology companies",
+      image: fintechImg,
+      gradient: "from-green-500 to-green-700",
+      borderColor: "border-green-200"
   },
   {
-    title: "Healthcare & Insurance",
-    description: "Protecting sensitive patient and policyholder data",
-    image: healthcareImg,
-    gradient: "from-red-500 to-red-700",
-    borderColor: "border-red-200"
+      title: "Healthcare & Insurance",
+      description: "Protecting sensitive patient and policyholder data",
+      image: healthcareImg,
+      gradient: "from-red-500 to-red-700",
+      borderColor: "border-red-200"
   },
   {
-    title: "Automobile",
-    description: "Securing manufacturing and dealership operations",
-    image: automobileImg,
-    gradient: "from-purple-500 to-purple-700",
-    borderColor: "border-purple-200"
+      title: "Automobile",
+      description: "Securing manufacturing and dealership operations",
+      image: automobileImg,
+      gradient: "from-purple-500 to-purple-700",
+      borderColor: "border-purple-200"
   },
   {
-    title: "Software Development & IT Services",
-    description: "Ensuring secure development and service delivery",
-    image: itServiceImg,
-    gradient: "from-indigo-500 to-indigo-700",
-    borderColor: "border-indigo-200"
+      title: "Software Development & IT Services",
+      description: "Ensuring secure development and service delivery",
+      image: itServiceImg,
+      gradient: "from-indigo-500 to-indigo-700",
+      borderColor: "border-indigo-200"
   },
   {
-    title: "Startups & Private Enterprises",
-    description: "Building security foundations for growing businesses",
-    image: startupImg,
-    gradient: "from-orange-500 to-orange-700",
-    borderColor: "border-orange-200"
+      title: "Startups & Private Enterprises",
+      description: "Building security foundations for growing businesses",
+      image: startupImg,
+      gradient: "from-orange-500 to-orange-700",
+      borderColor: "border-orange-200"
   }
 ];
 
 
 export const services = [
   {
-    id: 1,
-    title: "IT Governance, Risk & Compliance (GRC)",
-    icon: "🛡️",
-    description: "We offer a full spectrum of services across 7 key domains:",
-    details: [
-      "Implementation and compliance for ISO 27001, SEBI Cybersecurity Resilience Framework, PCI DSS",
-      "Internal control design, policy development, and business continuity planning"
-    ]
+      id: 1,
+      title: "IT Governance, Risk & Compliance (GRC)",
+      icon: "🛡️",
+      description: "We offer a full spectrum of services across 7 key domains:",
+      details: [
+          "Implementation and compliance for ISO 27001, SEBI Cybersecurity Resilience Framework, PCI DSS",
+          "Internal control design, policy development, and business continuity planning"
+      ]
   },
   {
-    id: 2,
-    title: "Cybersecurity and IT Risk Management",
-    icon: "🔒",
-    description: "Covering ITGC audits, cloud/application security, ICS security, and VAPT assessments",
-    details: []
+      id: 2,
+      title: "Cybersecurity and IT Risk Management",
+      icon: "🔒",
+      description: "Covering ITGC audits, cloud/application security, ICS security, and VAPT assessments",
+      details: []
   },
   {
-    id: 3,
-    title: "Cybersecurity Strategy & Advisory",
-    icon: "🎯",
-    description: "Guidance on security architecture, cloud security, IAM, application security, and security posture assessments",
-    details: []
+      id: 3,
+      title: "Cybersecurity Strategy & Advisory",
+      icon: "🎯",
+      description: "Guidance on security architecture, cloud security, IAM, application security, and security posture assessments",
+      details: []
   },
   {
-    id: 4,
-    title: "Security Transformation",
-    icon: "🔄",
-    description: "Comprehensive security enhancement services",
-    details: [
-      "Third-party risk management",
-      "Security automation",
-      "Incident response, business continuity, and disaster recovery planning"
-    ]
+      id: 4,
+      title: "Security Transformation",
+      icon: "🔄",
+      description: "Comprehensive security enhancement services",
+      details: [
+          "Third-party risk management",
+          "Security automation",
+          "Incident response, business continuity, and disaster recovery planning"
+      ]
   },
   {
-    id: 5,
-    title: "Virtual CISO (vCISO) Services",
-    icon: "👤",
-    description: "For SMEs and mid-sized companies without a dedicated CISO, we act as your security officer by managing:",
-    details: [
-      "Data classification & encryption",
-      "Access control & authentication",
-      "Data masking, auditing, retention & DLP",
-      "Secure data sharing, backup, monitoring, and threat detection"
-    ]
+      id: 5,
+      title: "Virtual CISO (vCISO) Services",
+      icon: "👤",
+      description: "For SMEs and mid-sized companies without a dedicated CISO, we act as your security officer by managing:",
+      details: [
+          "Data classification & encryption",
+          "Access control & authentication",
+          "Data masking, auditing, retention & DLP",
+          "Secure data sharing, backup, monitoring, and threat detection"
+      ]
   },
   {
-    id: 6,
-    title: "Data Life Cycle & Compliance Management",
-    icon: "📊",
-    description: "Comprehensive data governance and compliance solutions",
-    details: [
-      "Supporting certifications like SOC 2, HIPAA, ISO 27001",
-      "End-to-end data governance & privacy compliance"
-    ]
+      id: 6,
+      title: "Data Life Cycle & Compliance Management",
+      icon: "📊",
+      description: "Comprehensive data governance and compliance solutions",
+      details: [
+          "Supporting certifications like SOC 2, HIPAA, ISO 27001",
+          "End-to-end data governance & privacy compliance"
+      ]
   },
   {
-    id: 7,
-    title: "Specialized Financial Sector Solutions",
-    icon: "🏦",
-    description: "Tailored solutions for financial institutions",
-    details: [
-      "Audit Trail Verification (RBI/CERT-In mandates)",
-      "NPA Automation Reviews for banking",
-      "Offshore Data Processing Controls",
-      "Internal Financial Control (IFC) frameworks under Companies Act"
-    ]
+      id: 7,
+      title: "Specialized Financial Sector Solutions",
+      icon: "🏦",
+      description: "Tailored solutions for financial institutions",
+      details: [
+          "Audit Trail Verification (RBI/CERT-In mandates)",
+          "NPA Automation Reviews for banking",
+          "Offshore Data Processing Controls",
+          "Internal Financial Control (IFC) frameworks under Companies Act"
+      ]
   }
 ];
 
 export const additionalServices = [
   {
-    title: "Risk Management & Vulnerability Testing",
-    items: [
-      "Penetration Testing (VAPT)",
-      "Security Audits & Vulnerability Scanning",
-      "Continuous Threat Monitoring"
-    ],
-    borderColor: "border-l-blue-500"
+      title: "Risk Management & Vulnerability Testing",
+      items: [
+          "Penetration Testing (VAPT)",
+          "Security Audits & Vulnerability Scanning",
+          "Continuous Threat Monitoring"
+      ],
+      borderColor: "border-l-blue-500"
   },
   {
-    title: "Compliance & Regulatory Consulting",
-    items: [
-      "ITGC Audits, Internal & Forensic Audits",
-      "Regulatory Audit Support: RBI, SEBI, IRDAI, GDPR, DPDP",
-      "ISO 27001, SOC 2, HIPAA, PDPL Readiness",
-      "IFC & SOX Implementation"
-    ],
-    borderColor: "border-l-blue-500"
+      title: "Compliance & Regulatory Consulting",
+      items: [
+          "ITGC Audits, Internal & Forensic Audits",
+          "Regulatory Audit Support: RBI, SEBI, IRDAI, GDPR, DPDP",
+          "ISO 27001, SOC 2, HIPAA, PDPL Readiness",
+          "IFC & SOX Implementation"
+      ],
+      borderColor: "border-l-blue-500"
   },
   {
-    title: "Data Lifecycle Management (DLM)",
-    items: [
-      "Data Classification, Encryption, and Masking",
-      "Access Control & Identity Management",
-      "Data Retention, Integrity & Auditing",
-      "DLP, Backup, and Recovery",
-      "Secure Collaboration & Monitoring"
-    ],
-    borderColor: "border-l-blue-500"
+      title: "Data Lifecycle Management (DLM)",
+      items: [
+          "Data Classification, Encryption, and Masking",
+          "Access Control & Identity Management",
+          "Data Retention, Integrity & Auditing",
+          "DLP, Backup, and Recovery",
+          "Secure Collaboration & Monitoring"
+      ],
+      borderColor: "border-l-blue-500"
   },
   {
-    title: "Security Operations Center (SOC) for SMEs",
-    description: "A plug-and-play SOC ecosystem providing enterprise-grade security and visibility tailored for SMEs:",
-    features: [
-      "24×5/7 Monitoring & Alerting",
-      "Continuous Threat Detection",
-      "Builds Trust with Clients & Regulators",
-      "Supports SOC 2, HIPAA, ISO 27001, DPDP Compliance"
-    ],
-    borderColor: "border-l-blue-500"
+      title: "Security Operations Center (SOC) for SMEs",
+      description: "A plug-and-play SOC ecosystem providing enterprise-grade security and visibility tailored for SMEs:",
+      features: [
+          "24×5/7 Monitoring & Alerting",
+          "Continuous Threat Detection",
+          "Builds Trust with Clients & Regulators",
+          "Supports SOC 2, HIPAA, ISO 27001, DPDP Compliance"
+      ],
+      borderColor: "border-l-blue-500"
   },
   {
     title: "Regulatory Technology (RegTech) Platforms",
@@ -401,7 +393,7 @@ export const teamData = {
       experience: "10+ Years",
       credentials: "CA, CPA (Australia), DISA, FAFD, ISO 42001 LI, GDPR LI",
       specializations: "SOC 2, DPDP/GDPR Compliance, ITGC & IS Audits, Forensic Audits, Strategic Risk",
-
+    
     },
     {
       name: "HEMANG DOSHI",
@@ -409,7 +401,7 @@ export const teamData = {
       experience: "15+ Years",
       credentials: "CA, CISA, DISA, ISO 27001/22301 LA, CEH, GDPR",
       specializations: "System Audits, Operational Risk, Internal Controls, IBC Consulting, Author",
-
+     
     },
     {
       name: "KUNAL BHAVSAR",
@@ -417,7 +409,7 @@ export const teamData = {
       experience: "9+ Years",
       credentials: "M.Tech (Cybersecurity), CISM, CEH, ISO 27001 LA",
       specializations: "GRC Implementation (SOC 2, HIPAA, PCI-DSS), Security Governance, VAPT, GRC Tools",
-
+      
     },
     {
       name: "ROSHAN KAPPALA",
@@ -425,72 +417,73 @@ export const teamData = {
       experience: "5+ Years",
       credentials: "B.Tech (Cybersecurity), CEH, Cyber Criminologist",
       specializations: "Red Teaming, VAPT, Cloud Security, IoT Security, Incident Response, Threat Hunting, Cybersecurity Awareness",
-
+     
     }
   ]
 };
 
 
-export const servicesDelivered = [
+const servicesDelivered = [
   {
-    id: 1,
-    title: "IT General Controls (ITGC) Audit",
-    description: "Robust IT governance and risk management solutions.",
-    image: img2
+      id: 1,
+      title: "IT General Controls (ITGC) Audit",
+      description: "Robust IT governance and risk management solutions.",
+      image: './assets/serviceDelivered/img2.jpg'
   },
   {
-    id: 2,
-    title: "Cybersecurity Audit",
-    description: "Advanced protection from evolving cyber threats.",
-    image: img2
+      id: 2,
+      title: "Cybersecurity Audit",
+      description: "Advanced protection from evolving cyber threats.",
+      image: './assets/serviceDelivered/img2.jpg',
   },
   {
-    id: 3,
-    title: "Audit Trail Compliance",
-    description: "Ensuring transparent, compliant record-keeping practices.",
-    image: img3
+      id: 3,
+      title: "Audit Trail Compliance",
+      description: "Ensuring transparent, compliant record-keeping practices.",
+      image: './assets/serviceDelivered/img3.jpg'
   },
   {
-    id: 4,
-    title: "NPA Automation",
-    description: "Streamlining non-performing asset management processes.",
-    image: img4
+      id: 4,
+      title: "NPA Automation",
+      description: "Streamlining non-performing asset management processes.",
+      image: null // Placeholder for image
   },
   {
-    id: 5,
-    title: "Offshore Data Processing Audit",
-    description: "Ensuring secure, compliant offshore data operations.",
-    image: img5
+      id: 5,
+      title: "Offshore Data Processing Audit",
+      description: "Ensuring secure, compliant offshore data operations.",
+      image: null // Placeholder for image
   },
   {
-    id: 6,
-    title: "Application Security Testing",
-    description: "Comprehensive vulnerability identification and remediation services.",
-    image: img6
+      id: 6,
+      title: "Application Security Testing",
+      description: "Comprehensive vulnerability identification and remediation services.",
+      image: null // Placeholder for image
   },
   {
-    id: 7,
-    title: "Internal Financial Controls (IFC) Implementation",
-    description: "Strengthening financial reporting accuracy and reliability.",
-    image: img7
+      id: 7,
+      title: "Internal Financial Controls (IFC) Implementation",
+      description: "Strengthening financial reporting accuracy and reliability.",
+      image: null // Placeholder for image
   },
   {
-    id: 8,
-    title: "ERP Implementation Support",
-    description: "Providing smooth ERP deployment for enhanced efficiency.",
-    image: img8
+      id: 8,
+      title: "ERP Implementation Support",
+      description: "Providing smooth ERP deployment for enhanced efficiency.",
+      image: null // Placeholder for image
   },
   {
-    id: 9,
-    title: "SOX End-to-End Implementation",
-    description: "Delivering seamless SOX compliance frameworks.",
-    image: img9
+      id: 9,
+      title: "SOX End-to-End Implementation",
+      description: "Delivering seamless SOX compliance frameworks.",
+      image: null // Placeholder for image
   },
   {
-    id: 10,
-    title: "Vulnerability Assessment & Penetration Testing (VAPT)",
-    description: "Offering proactive security weakness detection and remediation.",
-    image: img10 
+      id: 10,
+      title: "Vulnerability Assessment & Penetration Testing (VAPT)",
+      description: "Offering proactive security weakness detection and remediation.",
+      image: null // Placeholder for image
   }
 ];
 
+export { servicesDelivered };

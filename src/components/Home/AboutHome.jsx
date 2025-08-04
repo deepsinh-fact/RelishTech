@@ -1,10 +1,11 @@
 import React from "react";
-import { homeData } from "../../data.js";
+import { homeData } from "../../data.jsx";
 // import aboutHomeImage from "../../assets/about-Home.png";
+import cyber from "../../assets/cyber.jpg";
 
 const AboutHome = () => {
     return (
-        <div className="bg-[#0A1F44] py-16 sm:py-24">
+        <div className="bg-[#0A1F44] py-12 sm:py-18">
 
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,7 +24,7 @@ const AboutHome = () => {
 
                     <div className="md:w-1/2 mt-8 md:mt-0 text-white">
                         <img
-                            src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+                            src={cyber}
                             alt="About Us"
                             className="rounded-lg shadow-xl w-full h-auto object-cover"
                             onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/600x400/0A1F44/ffffff?text=About+Us'; }}

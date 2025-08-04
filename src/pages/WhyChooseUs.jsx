@@ -10,7 +10,7 @@ const WhyChooseUs = () => {
             <Hero data={heroData.whyChooseUs} />
 
             {/* Main Content */}
-            <div className="py-16 bg-[#0A1F44]">
+            <div className="py-8 bg-[#0A1F44]">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Reasons Grid */}
                     <div className="text-center mb-16">

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { statsData } from '../../data.js';
+import { statsData } from '../../data.jsx';
 
 // Custom hook for intersection observer
 const useIntersectionObserver = () => {
@@ -36,11 +36,11 @@ const useCountUp = (end, shouldStart) => {
 
     useEffect(() => {
         if (!shouldStart) return;
-        
+
         const duration = 2000;
         const increment = endValue / (duration / 16);
         let current = 0;
-        
+
         const timer = setInterval(() => {
             current += increment;
             if (current >= endValue) {
@@ -68,7 +68,7 @@ const DecorativeCircleIcon = () => (
 
 // Reusable component for each individual statistic
 const StatItem = ({ value, unit, label, description, shouldAnimate }) => {
-    const animatedValue = useCountUp(value, 2000, shouldAnimate);
+    const animatedValue = useCountUp(value, shouldAnimate);
     const unitMargin = unit === '+' ? 'ml-1' : '';
 
     return (
@@ -91,7 +91,7 @@ const OurWork = () => {
     const [sectionRef, isIntersecting] = useIntersectionObserver();
 
     return (
-        <section ref={sectionRef} className="bg-[#0a1942] text-white py-16 sm:py-24">
+        <section ref={sectionRef} className="bg-[#0a1942] text-white py-8 sm:py-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-12">
                     <div className="inline-block bg-[#191970] text-white text-sm font-semibold py-1 px-3 rounded-full mb-4 border border-white hover:shadow-[0_0_10px_#ffffff]">

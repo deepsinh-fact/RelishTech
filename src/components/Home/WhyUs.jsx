@@ -1,12 +1,12 @@
 import React from "react";
 import FeatureCard from "./FeaturedCard.jsx";
-import { featuresData } from "../../data.js";
+import { featuresData } from "../../data.jsx";
 
 const WhyUs = () => {
 
 
     return (
-        <section className="bg-[#0A1F44] py-16 sm:py-24">
+        <section className="bg-[#0A1F44] py-8 sm:py-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-12">
                     <div className="inline-block bg-[#191970] text-white text-sm font-semibold py-1 px-3 rounded-full mb-4 border border-white hover:shadow-[0_0_10px_#ffffff]">

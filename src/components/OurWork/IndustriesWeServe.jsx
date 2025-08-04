@@ -5,57 +5,13 @@ import healthcareImg from "../../assets/Service/healthcare.jpg";
 import automobileImg from "../../assets/Service/automobile.jpg";
 import itServiceImg from "../../assets/Service/IT service.jpg";
 import startupImg from "../../assets/Service/startup.jpg";
-
+import { industries } from "../../data";
 const IndustriesWeServe = () => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
-    const industries = [
-        {
-            title: "Banking, NBFCs & Financial Institutions",
-            description: "Specialized solutions for the highly regulated financial sector",
-            image: bankingImg,
-            gradient: "from-blue-500 to-blue-700",
-            borderColor: "border-blue-200"
-        },
-        {
-            title: "FinTech & Stock Broking",
-            description: "Security for innovative financial technology companies",
-            image: fintechImg,
-            gradient: "from-green-500 to-green-700",
-            borderColor: "border-green-200"
-        },
-        {
-            title: "Healthcare & Insurance",
-            description: "Protecting sensitive patient and policyholder data",
-            image: healthcareImg,
-            gradient: "from-red-500 to-red-700",
-            borderColor: "border-red-200"
-        },
-        {
-            title: "Automobile",
-            description: "Securing manufacturing and dealership operations",
-            image: automobileImg,
-            gradient: "from-purple-500 to-purple-700",
-            borderColor: "border-purple-200"
-        },
-        {
-            title: "Software Development & IT Services",
-            description: "Ensuring secure development and service delivery",
-            image: itServiceImg,
-            gradient: "from-indigo-500 to-indigo-700",
-            borderColor: "border-indigo-200"
-        },
-        {
-            title: "Startups & Private Enterprises",
-            description: "Building security foundations for growing businesses",
-            image: startupImg,
-            gradient: "from-orange-500 to-orange-700",
-            borderColor: "border-orange-200"
-        }
-    ];
 
     return (
-        <div className="py-20 px-4 relative overflow-hidden" style={{ backgroundColor: '#0A1F44' }}>
+        <div className="py-10 px-4 relative overflow-hidden" style={{ backgroundColor: '#0A1F44' }}>
             {/* Background decoration */}
             <div className="absolute inset-0 opacity-10">
                 <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400 rounded-full blur-3xl"></div>
@@ -66,10 +22,7 @@ const IndustriesWeServe = () => {
                 {/* Enhanced Header */}
                 <div className="text-center mb-16">
                     <div className="inline-block">
-
-
                         <h2 className="text-3xl font-medium text-white sm:text-4xl">Industries We Serve</h2>
-
                     </div>
                     <p className="text-xl text-gray-300 mt-6 max-w-3xl mx-auto">
                         Delivering specialized cybersecurity solutions across diverse sectors with industry-specific expertise
@@ -103,10 +56,7 @@ const IndustriesWeServe = () => {
                                         e.target.nextSibling.style.display = 'flex';
                                     }}
                                 />
-                                {/* Fallback placeholder when image fails to load */}
-                                <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center" style={{ display: 'none' }}>
-                                    <span className="text-gray-500 text-sm">Image placeholder</span>
-                                </div>
+                             
                             </div>
 
                             {/* Content */}
