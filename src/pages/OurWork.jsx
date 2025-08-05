@@ -5,7 +5,11 @@ import IndustriesWeServe from '../components/OurWork/IndustriesWeServe';
 import WhatWeDo from '../components/OurWork/WhatWeDo';
 
 const OurWork = () => {
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
+
         <div className="min-h-screen bg-[#0A1F44]">
             {/* Hero Section */}
             <Hero data={heroData.ourWork} />

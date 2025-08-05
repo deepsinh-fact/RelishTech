@@ -4,6 +4,7 @@ const Contact = () => {
     React.useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+    
     return (
         <div className="bg-[#0A1F44] min-h-screen">
             <div className="pt-12 px-4 sm:px-6 lg:px-8 pb-8">
