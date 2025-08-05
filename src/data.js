@@ -14,6 +14,16 @@ import img8 from "./assets/serviceDelivered/img8.jpg";
 import img9 from "./assets/serviceDelivered/img9.jpg";
 import img10 from "./assets/serviceDelivered/img10.jpg";
 
+// ----------------------------------
+
+import grc from './assets/grc.jpg'
+import risk from './assets/risk.jpg'
+import expertise from './assets/expertise.jpg'
+import protection from './assets/protection.jpg'
+import teamOfExpert from './assets/teamOfExpert.jpg'
+
+
+
 export const heroData = {
   home: {
     tag: "Cyber Security",
@@ -129,50 +139,6 @@ export const statsData = [
   }
 ];
 
-export const servicesData = [
-  {
-    icon: 'ShieldIcon',
-    title: 'Governance, Risk & Compliance (GRC)',
-    description: 'Navigate internal controls, security policies, business continuity, and compliance with ISO 27001, NCA, and PDPL.',
-    gradient: 'bg-gradient-to-br from-orange-400 via-pink-400 to-purple-600',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-    fallbackImage: 'https://placehold.co/500x300/0E2A5B/ffffff?text=GRC+Services'
-  },
-  {
-    icon: 'DocumentIcon',
-    title: 'Compliance & Audit Services',
-    description: 'Ensure regulatory adherence with our compliance, internal, fraud detection, and data privacy audits.',
-    gradient: 'bg-gradient-to-br from-pink-300 via-orange-300 to-red-400',
-    image: "/compliance.jpg",
-    fallbackImage: 'https://placehold.co/500x300/0E2A5B/ffffff?text=Compliance+Services'
-  },
-  {
-    icon: 'CybersecurityIcon',
-    title: 'Cybersecurity & IT Risk Management',
-    description: 'Protect your digital assets with ITGC, cybersecurity, cloud, application, and industrial control system security, plus VAPT.',
-    gradient: 'bg-gradient-to-br from-purple-400 via-pink-400 to-orange-400',
-    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
-    fallbackImage: 'https://placehold.co/500x300/0E2A5B/ffffff?text=Cybersecurity+Services'
-  }
-];
-
-export const featuresData = [
-  {
-    imageSrc: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-    title: "Proven Expertise",
-    description: "3+ years of excellence with 100+ successful projects."
-  },
-  {
-    imageSrc: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-    title: "Comprehensive Protection",
-    description: "Protecting digital assets and ensuring compliance."
-  },
-  {
-    imageSrc: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
-    title: "Dedicated Professionals",
-    description: "Team of 20+ cybersecurity experts."
-  }
-];
 
 export const whyChooseUsData = {
   reasons: [
@@ -226,50 +192,7 @@ export const whyChooseUsData = {
   ]
 };
 
-export const industries = [
-  {
-    title: "Banking, NBFCs & Financial Institutions",
-    description: "Specialized solutions for the highly regulated financial sector",
-    image: bankingImg,
-    gradient: "from-blue-500 to-blue-700",
-    borderColor: "border-blue-200"
-  },
-  {
-    title: "FinTech & Stock Broking",
-    description: "Security for innovative financial technology companies",
-    image: fintechImg,
-    gradient: "from-green-500 to-green-700",
-    borderColor: "border-green-200"
-  },
-  {
-    title: "Healthcare & Insurance",
-    description: "Protecting sensitive patient and policyholder data",
-    image: healthcareImg,
-    gradient: "from-red-500 to-red-700",
-    borderColor: "border-red-200"
-  },
-  {
-    title: "Automobile",
-    description: "Securing manufacturing and dealership operations",
-    image: automobileImg,
-    gradient: "from-purple-500 to-purple-700",
-    borderColor: "border-purple-200"
-  },
-  {
-    title: "Software Development & IT Services",
-    description: "Ensuring secure development and service delivery",
-    image: itServiceImg,
-    gradient: "from-indigo-500 to-indigo-700",
-    borderColor: "border-indigo-200"
-  },
-  {
-    title: "Startups & Private Enterprises",
-    description: "Building security foundations for growing businesses",
-    image: startupImg,
-    gradient: "from-orange-500 to-orange-700",
-    borderColor: "border-orange-200"
-  }
-];
+
 
 
 export const services = [
@@ -493,4 +416,99 @@ export const servicesDelivered = [
     image: img10 
   }
 ];
+
+
+
+// ----------------------------------------------------------------
+
+export const servicesData = [
+  {
+    icon: 'ShieldIcon',
+    title: 'Governance, Risk & Compliance (GRC)',
+    description: 'Navigate internal controls, security policies, business continuity, and compliance with ISO 27001, NCA, and PDPL.',
+    gradient: 'bg-gradient-to-br from-orange-400 via-pink-400 to-purple-600',
+    image: grc
+  },
+  {
+    icon: 'DocumentIcon',
+    title: 'Compliance & Audit Services',
+    description: 'Ensure regulatory adherence with our compliance, internal, fraud detection, and data privacy audits.',
+    gradient: 'bg-gradient-to-br from-pink-300 via-orange-300 to-red-400',
+    image: "/compliance.jpg",
+  },
+  {
+    icon: 'CybersecurityIcon',
+    title: 'Cybersecurity & IT Risk Management',
+    description: 'Protect your digital assets with ITGC, cybersecurity, cloud, application, and industrial control system security, plus VAPT.',
+    gradient: 'bg-gradient-to-br from-purple-400 via-pink-400 to-orange-400',
+    image: risk
+   }
+];
+
+export const featuresData = [
+  {
+    imageSrc: expertise, 
+    title: "Proven Expertise",
+    description: "3+ years of excellence with 100+ successful projects."
+  },
+  {
+    imageSrc: protection,
+    title: "Comprehensive Protection",
+    description: "Protecting digital assets and ensuring compliance."
+  },
+  {
+    imageSrc: teamOfExpert,
+    title: "Dedicated Professionals",
+    description: "Team of 20+ cybersecurity experts."
+  }
+];
+
+export const industries = [
+  {
+      title: "Banking, NBFCs & Financial Institutions",
+      description: "Specialized solutions for the highly regulated financial sector",
+      image: bankingImg,
+      gradient: "from-blue-500 to-blue-700",
+      borderColor: "border-blue-200"
+  },
+  {
+      title: "FinTech & Stock Broking",
+      description: "Security for innovative financial technology companies",
+      image: fintechImg,
+      gradient: "from-green-500 to-green-700",
+      borderColor: "border-green-200"
+  },
+  {
+      title: "Healthcare & Insurance",
+      description: "Protecting sensitive patient and policyholder data",
+      image: healthcareImg,
+      gradient: "from-red-500 to-red-700",
+      borderColor: "border-red-200"
+  },
+  {
+      title: "Automobile",
+      description: "Securing manufacturing and dealership operations",
+      image: automobileImg,
+      gradient: "from-purple-500 to-purple-700",
+      borderColor: "border-purple-200"
+  },
+  {
+      title: "Software Development & IT Services",
+      description: "Ensuring secure development and service delivery",
+      image: itServiceImg,
+      gradient: "from-indigo-500 to-indigo-700",
+      borderColor: "border-indigo-200"
+  },
+  {
+      title: "Startups & Private Enterprises",
+      description: "Building security foundations for growing businesses",
+      image: startupImg,
+      gradient: "from-orange-500 to-orange-700",
+      borderColor: "border-orange-200"
+  }
+];
+
+
+
+
 

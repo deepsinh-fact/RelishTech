@@ -7,6 +7,9 @@ import WhyUs from "../components/Home/WhyUs.jsx";
 import { heroData } from '../data'
 
 const Home = () => {
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         // <main className="bg-[#0E3386]">
         <main className="bg-[#0A1F44]">
@@ -39,7 +42,6 @@ const Home = () => {
 
 
             </div>
-            <Footer />
         </main>
     );
 };

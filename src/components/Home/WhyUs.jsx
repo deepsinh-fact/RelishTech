@@ -1,6 +1,6 @@
 import React from "react";
 import FeatureCard from "./FeaturedCard.jsx";
-import { featuresData } from "../../data.jsx";
+import { featuresData } from "../../data";
 
 const WhyUs = () => {
 

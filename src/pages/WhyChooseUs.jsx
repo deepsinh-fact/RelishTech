@@ -1,9 +1,11 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import { heroData, whyChooseUsData } from '../data';
-import Footer from '../components/Footer';
 
 const WhyChooseUs = () => {
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <div className="min-h-screen bg-[#0A1F44]">
             {/* Hero Section */}
@@ -134,7 +136,7 @@ const WhyChooseUs = () => {
                 </div>
                 
             </div>
-            <Footer/>
+     
         </div>
     );
 };

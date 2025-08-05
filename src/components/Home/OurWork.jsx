@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { statsData } from '../../data.jsx';
+import { statsData } from '../../data';
 
 // Custom hook for intersection observer
 const useIntersectionObserver = () => {
@@ -86,8 +86,13 @@ const StatItem = ({ value, unit, label, description, shouldAnimate }) => {
     );
 };
 
-// Main component that maps over the data and renders the section
+
 const OurWork = () => {
+
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     const [sectionRef, isIntersecting] = useIntersectionObserver();
 
     return (

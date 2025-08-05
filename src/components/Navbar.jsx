@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-
+import Logo from '../assets/Logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +11,7 @@ const Navbar = () => {
     { name: 'Services', href: '/services' },
     { name: 'Why Choose Us', href: '/why-choose-us' },
     { name: 'Our Work', href: '/our-work' },
-    {name: 'Our Team' , href: '/our-team'},
+    { name: 'Our Team', href: '/our-team' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -25,8 +25,12 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <NavLink to="/home" className="text-2xl font-bold text-white">
-              Relish
+            <NavLink to="/" className="text-2xl font-bold text-white">
+              <img
+                src={Logo}
+                alt="Logo"
+                className="h-55 w-auto brightness-0 invert"
+              />
             </NavLink>
           </div>
 

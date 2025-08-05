@@ -1,5 +1,5 @@
 import React from 'react';
-import { servicesData } from '../../data.jsx';
+import { servicesData } from '../../data';
 
 // Icon components
 const ShieldIcon = ({ className }) => (

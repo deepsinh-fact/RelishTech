@@ -3,6 +3,8 @@ import facebookIcon from '../assets/icons/facebook.png';
 import instagramIcon from '../assets/icons/instagram.png';
 import linkedInIcon from '../assets/icons/linkedIn.png';
 import twitterIcon from '../assets/icons/twitter.png';
+import Logo from '../assets/Logo.png';
+
 
 const Footer = () => {
     return (
@@ -11,14 +13,18 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {/* Company Info */}
                     <div className="col-span-1 md:col-span-1">
-                        <div className="flex items-center mb-4">
-                            <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center mr-3 border border-white hover:shadow-[0_0_10px_#ffffff]">
-                                <span className="text-[#191970] font-bold text-lg">R</span>
-                            </div>
-                            <h3 className="text-xl font-bold">RELISH TECH GLOBAL</h3>
+                        <div className="flex items-center">
+
+                            <img
+                                src={Logo}
+                                alt="Logo"
+                                className="h-28 w-auto brightness-0 invert"
+                            />
+
+                            <h3 className=" font-bold">RELISH TECH GLOBAL</h3>
                         </div>
                         <p className="text-gray-300 text-sm leading-relaxed">
-                        Relish Tech Global Solutions Pvt. Ltd. is a cybersecurity and IT risk advisory firm helping small and mid-sized enterprises achieve digital resilience and regulatory confidence. 
+                            Relish Tech Global Solutions Pvt. Ltd. is a cybersecurity and IT risk advisory firm helping small and mid-sized enterprises achieve digital resilience and regulatory confidence.
                         </p>
                     </div>
 
@@ -52,8 +58,9 @@ const Footer = () => {
                         <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
                         <div className="space-y-3">
                             <div className="flex items-center">
-                                
-                                <span className="text-gray-300">(123) 456-7890</span>
+
+                                <span className="text-gray-300">+91 99250 98997
+                                </span>
                             </div>
                             <div className="flex items-center">
                                 {/* <span className="text-white mr-2">📍</span> */}

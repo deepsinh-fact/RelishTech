@@ -33,27 +33,27 @@ const AdditionalServices = () => {
                     {additionalServices.map((service, index) => (
                         <div
                             key={index}
-                            className={`group relative bg-white/95 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-lg sm:shadow-2xl 
-                                       hover:shadow-blue-500/20 hover:shadow-2xl transition-all duration-500 
-                                       overflow-hidden border border-white/20 hover:border-blue-300 
+                            className={`group relative bg-[#1a2b4a]/80 backdrop-blur-sm rounded-xl sm:rounded-2xl shadow-lg sm:shadow-2xl 
+                                       hover:shadow-blue-500/30 hover:shadow-2xl transition-all duration-500 
+                                       overflow-hidden border border-blue-400/20 hover:border-blue-400/50 
                                        transform hover:-translate-y-1 sm:hover:-translate-y-2 cursor-pointer
-                                       hover:bg-white p-6 sm:p-8 ${hoveredIndex === index ? 'sm:scale-105' : ''}`}
+                                       hover:bg-[#1a2b4a] p-6 sm:p-8 ${hoveredIndex === index ? 'sm:scale-105' : ''}`}
                             onMouseEnter={() => setHoveredIndex(index)}
                             onMouseLeave={() => setHoveredIndex(null)}
                         >
                             {/* Gradient overlay on hover */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-indigo-600 to-purple-700 
-                                           opacity-0 group-hover:opacity-5 transition-opacity duration-500"></div>
+                            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-indigo-600/10 to-purple-700/10 
+                                           opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                             <div className="relative z-10">
-                                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6 
-                                             group-hover:text-blue-900 transition-colors duration-300">
+                                <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6 
+                                             group-hover:text-blue-300 transition-colors duration-300">
                                     {service.title}
                                 </h3>
 
                                 {service.description && (
-                                    <p className="text-gray-700 mb-4 sm:mb-6 leading-relaxed 
-                                                 group-hover:text-gray-800 transition-colors duration-300">
+                                    <p className="text-gray-300 mb-4 sm:mb-6 leading-relaxed 
+                                                 group-hover:text-gray-200 transition-colors duration-300">
                                         {service.description}
                                     </p>
                                 )}
@@ -61,10 +61,10 @@ const AdditionalServices = () => {
                                 <ul className="space-y-3">
                                     {(service.items || service.features || []).map((item, itemIndex) => (
                                         <li key={itemIndex} className="flex items-start group/item">
-                                            <div className="flex-shrink-0 w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 
-                                                           group-hover/item:bg-blue-600 transition-colors duration-300"></div>
-                                            <span className="text-gray-700 leading-relaxed 
-                                                           group-hover:text-gray-800 transition-colors duration-300">
+                                            <div className="flex-shrink-0 w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 
+                                                           group-hover/item:bg-blue-300 transition-colors duration-300"></div>
+                                            <span className="text-gray-300 leading-relaxed 
+                                                           group-hover:text-gray-200 transition-colors duration-300">
                                                 {item}
                                             </span>
                                         </li>

@@ -3,7 +3,6 @@ import Hero from '../components/Hero';
 import { heroData } from '../data';
 import IndustriesWeServe from '../components/OurWork/IndustriesWeServe';
 import WhatWeDo from '../components/OurWork/WhatWeDo';
-import Footer from '../components/Footer';
 
 const OurWork = () => {
     return (
@@ -38,7 +37,7 @@ const OurWork = () => {
                 <WhatWeDo />
         
             </section>
-            <Footer />
+      
         </div>
     );
 };

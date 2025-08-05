@@ -1,5 +1,5 @@
 import React from "react";
-import { homeData } from "../../data.jsx";
+import { homeData } from "../../data";
 // import aboutHomeImage from "../../assets/about-Home.png";
 import cyber from "../../assets/cyber.jpg";
 

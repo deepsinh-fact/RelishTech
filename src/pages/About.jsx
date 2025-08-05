@@ -1,7 +1,7 @@
 import React from "react";
-import Hero from "../components/Hero.jsx";
-import Footer from "../components/Footer.jsx";
-import { heroData, aboutData } from "../data.jsx";
+import Hero from "../components/Hero.jsx";WhatWeDo
+import { heroData, aboutData } from "../data";
+import WhatWeDo from "../components/OurWork/WhatWeDo.jsx";
 
 
 const ShieldIcon = ({ className }) => (
@@ -11,6 +11,9 @@ const ShieldIcon = ({ className }) => (
 );
 
 const About = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Hero data={heroData.about} />
@@ -71,7 +74,6 @@ const About = () => {
 
 
         </div>
-        <Footer />
       </div>
 
     </>
