@@ -34,19 +34,19 @@ const IndustriesWeServe = () => {
                     {industries.map((industry, index) => (
                         <div
                             key={index}
-                            className={`group relative bg-white/95 backdrop-blur-sm p-8 rounded-2xl border-2 ${industry.borderColor} 
-                                       hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500 
+                            className={`group relative bg-gradient-to-br from-[#1a2f5a] to-[#0f1d3a] backdrop-blur-sm p-8 rounded-2xl border-2 border-blue-400/20 
+                                       hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-500 
                                        transform hover:-translate-y-2 cursor-pointer overflow-hidden
-                                       hover:bg-white ${hoveredIndex === index ? 'scale-105' : ''}`}
+                                       hover:from-[#1e3461] hover:to-[#132040] hover:border-blue-300/50 ${hoveredIndex === index ? 'scale-105' : ''}`}
                             onMouseEnter={() => setHoveredIndex(index)}
                             onMouseLeave={() => setHoveredIndex(null)}
                         >
                             {/* Gradient overlay on hover */}
-                            <div className={`absolute inset-0 bg-gradient-to-br ${industry.gradient} opacity-0 
-                                           group-hover:opacity-5 transition-opacity duration-500`}></div>
+                            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-indigo-500/10 
+                                           opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                             {/* Image container */}
-                            <div className="relative z-10 w-full h-48 mb-6 rounded-xl overflow-hidden bg-gray-100">
+                            <div className="relative z-10 w-full h-48 mb-6 rounded-xl overflow-hidden bg-gradient-to-br from-blue-800/50 to-purple-800/50">
                                 <img
                                     src={industry.image}
                                     alt={industry.title}
@@ -56,16 +56,27 @@ const IndustriesWeServe = () => {
                                         e.target.nextSibling.style.display = 'flex';
                                     }}
                                 />
-                             
+                                {/* Fallback placeholder */}
+                                <div className="w-full h-full bg-gradient-to-br from-blue-800/50 to-purple-800/50 flex items-center justify-center"
+                                    style={{ display: 'none' }}>
+                                    <div className="text-center">
+                                        <div className="w-16 h-16 mx-auto mb-3 bg-blue-600 rounded-full flex items-center justify-center">
+                                            <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                                            </svg>
+                                        </div>
+                                        <p className="text-sm text-blue-200 font-medium">Industry</p>
+                                    </div>
+                                </div>
                             </div>
 
                             {/* Content */}
                             <div className="relative z-10">
-                                <h3 className="text-xl font-bold text-gray-800 mb-4 group-hover:text-blue-900 
+                                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-blue-200 
                                              transition-colors duration-300 leading-tight">
                                     {industry.title}
                                 </h3>
-                                <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 
+                                <p className="text-gray-300 leading-relaxed group-hover:text-gray-200 
                                              transition-colors duration-300">
                                     {industry.description}
                                 </p>
@@ -73,7 +84,7 @@ const IndustriesWeServe = () => {
 
                             {/* Hover indicator */}
                             <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r 
-                                           from-blue-400 to-cyan-400 transform scale-x-0 group-hover:scale-x-100 
+                                           from-blue-400 to-purple-400 transform scale-x-0 group-hover:scale-x-100 
                                            transition-transform duration-300 origin-left"></div>
                         </div>
                     ))}

@@ -29,7 +29,7 @@ const About = () => {
             </p>
           </div>
           {/* about us  */}
-          <div className="text-left max-w-3xl mt-10">
+          <div className="text-left mt-10">
 
             <div className="inline-block bg-[#191970] text-white text-sm font-semibold py-1 px-3 rounded-full mb-4 border border-white hover:shadow-[0_0_10px_#ffffff]">
               {aboutData.tag}
@@ -73,7 +73,7 @@ const About = () => {
         </div>
         <Footer />
       </div>
-  
+
     </>
   );
 }
